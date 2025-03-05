@@ -31,9 +31,12 @@ const handler = NextAuth({
   },
   session: {
     strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+    maxAge: 30 * 24 * 60 * 60
   },
   callbacks: {
+    async redirect({url, baseUrl}) {
+      return `${baseUrl}/dashboard`;
+    },
     async session({ session, token }) {
       if (session?.user) {
         session.user.id = token.sub
