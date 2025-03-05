@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PassVault
+PassVault is a zero-knowledge, encrypted password manager built with Next.js 15, TypeScript, and Tailwind CSS. It allows you to securely store and manage your passwords with client-side encryption, ensuring your sensitive data never leaves your browser unencrypted.
 
-## Getting Started
+## Features
+- **Zero-Knowledge Architecture**: All encryption/decryption happens in your browser
+- **OAuth Authentication**: Secure login via Google and GitHub
+- **Strong Encryption**: AES-256 encryption with CryptoJS
+- **Password Generation**: Create strong, unique passwords with configurable options
+- **Password Strength Analysis**: Real-time feedback on password security
+- **Dark/Light Mode**: Choose your preferred theme
+- **Responsive Design**: Works on desktop and mobile devices
+- **Intuitive UI**: Easy to use with modern design patterns
 
-First, run the development server:
+## Tech Stack
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Authentication**: NextAuth.js with OAuth providers
+- **Database**: MongoDB with Prisma ORM
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Encryption**: CryptoJS (AES-256)
+- **Deployment**: Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Security
+PassVault uses a zero-knowledge architecture which means:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. All sensitive data is encrypted/decrypted locally in your browser
+2. The encryption key is derived from your login credentials
+3. The server never sees your unencrypted data
+4. Even if the database is compromised, your passwords remain encrypted
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Disclaimer
+This project is a demonstration and educational tool. While it implements security best practices, no software is 100% secure, and you should evaluate its security for your own needs.
